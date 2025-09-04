@@ -1,0 +1,57 @@
+---
+sidebar: sidebar 
+permalink: reference-limitations-aws.html 
+keywords: limitations, aws, amazon web services, flashe cache, alarms, cloudwatch, giveback, govcloud, c2s, aws outpost, outposts 
+summary: Ces limitations connues sont spécifiques à Cloud Volumes ONTAP dans Amazon Web Services. 
+---
+= Limitations connues de Cloud Volumes ONTAP dans AWS
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Les limitations connues suivantes sont spécifiques à Cloud Volumes ONTAP dans Amazon Web Services.  Assurez-vous également de consulterlink:reference-limitations.html["Limitations de Cloud Volumes ONTAP chez tous les fournisseurs de cloud"] .
+
+
+
+== Limitations d'AWS Outpost
+
+Si vous disposez d'un Outpost AWS, vous pouvez déployer Cloud Volumes ONTAP dans cet Outpost en sélectionnant le VPC Outpost dans l'assistant Environnement de travail.  L'expérience est la même que pour tout autre VPC résidant dans AWS.  Notez que vous devrez d’abord déployer un connecteur dans votre AWS Outpost.
+
+Il y a quelques limitations à souligner :
+
+* Seuls les systèmes Cloud Volumes ONTAP à nœud unique sont actuellement pris en charge
+* Les instances EC2 que vous pouvez utiliser avec Cloud Volumes ONTAP sont limitées à ce qui est disponible dans votre Outpost
+* Seuls les SSD à usage général (gp2) sont actuellement pris en charge
+
+
+
+
+== Limitations du cache Flash
+
+Les types d'instances C5D et R5D incluent le stockage NVMe local, que Cloud Volumes ONTAP utilise comme _Flash Cache_.  Veuillez noter les limitations suivantes :
+
+* La compression doit être désactivée sur tous les volumes pour profiter des améliorations des performances du cache Flash jusqu'à Cloud Volumes ONTAP 9.12.0.  Lorsque vous déployez ou effectuez une mise à niveau vers Cloud Volumes ONTAP 9.12.1, vous n'avez pas besoin de désactiver la compression.
++
+Vous pouvez choisir de ne pas utiliser d'efficacité de stockage lors de la création d'un volume à partir de BlueXP, ou vous pouvez créer un volume, puis http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/GUID-8508A4CB-DB43-4D0D-97EB-859F58B29054.html["désactiver la compression des données à l'aide de la CLI"^] .
+
+* Le réchauffement du cache après un redémarrage n'est pas pris en charge avec Cloud Volumes ONTAP.
+
+
+
+
+== Fausses alarmes signalées par Amazon CloudWatch
+
+Cloud Volumes ONTAP ne libère pas les processeurs lorsqu'ils sont inactifs, donc https://aws.amazon.com/cloudwatch/["Amazon CloudWatch"^] peut signaler un avertissement de CPU élevé pour l'instance EC2 car elle constate une utilisation à 100 %.  Vous pouvez ignorer cette alarme.  La commande de statistiques ONTAP affiche l'utilisation réelle des processeurs.
+
+
+
+== Les paires Cloud Volumes ONTAP HA ne prennent pas en charge la restitution immédiate du stockage
+
+Après le redémarrage d'un nœud, le partenaire doit synchroniser les données avant de pouvoir renvoyer le stockage.  Le temps nécessaire à la resynchronisation des données dépend de la quantité de données écrites par les clients pendant que le nœud était en panne et de la vitesse d'écriture des données pendant la période de restitution.
+
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-ha.html["Découvrez comment fonctionne le stockage dans une paire Cloud Volumes ONTAP HA exécutée dans AWS"^] .
