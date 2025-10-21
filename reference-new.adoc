@@ -16,13 +16,21 @@ summary: Cloud Volumes ONTAP 9.16.1 inclut une nouvelle amélioration.
 [role="lead"]
 Cloud Volumes ONTAP 9.16.1 inclut de nouvelles améliorations.
 
-Des fonctionnalités et améliorations supplémentaires sont également introduites dans les dernières versions de BlueXP.  Voir le https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Notes de version de BlueXP"^] pour plus de détails.
+Des fonctionnalités et améliorations supplémentaires sont également introduites dans les dernières versions de la NetApp Console. Voir le https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Notes de version de Cloud Volumes ONTAP"^] pour plus de détails.
+
+
+
+== 9.16.1 P8 (16 octobre 2025)
+
+Le correctif Cloud Volumes ONTAP 9.16.1 P8 est désormais disponible pour la mise à niveau dans Azure et Google Cloud. Cependant, cette version n'est pas disponible pour la mise à niveau dans AWS. La console vous invitera à mettre à niveau vos systèmes existants vers cette version de correctif.
+
+link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.16.1P8["Voir la liste des bugs corrigés dans le patch P8"^](Connexion au site de support NetApp requise).
 
 
 
 == 9.16.1 P7 (09 octobre 2025)
 
-Le correctif Cloud Volumes ONTAP 9.16.1 P7 est désormais disponible pour la mise à niveau dans Azure et Google Cloud.  Cependant, cette version n'est pas disponible pour la mise à niveau dans AWS. La NetApp Console vous invitera à mettre à niveau vos systèmes existants vers cette version de correctif.
+Le correctif Cloud Volumes ONTAP 9.16.1 P7 est désormais disponible pour la mise à niveau dans Azure et Google Cloud. Cependant, cette version n'est pas disponible pour la mise à niveau dans AWS. La console vous invitera à mettre à niveau vos systèmes existants vers cette version de correctif.
 
 link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.16.1P7["Voir la liste des bugs corrigés dans le patch P7"^] (Connexion au site de support NetApp requise).
 
@@ -30,7 +38,7 @@ link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/
 
 == 9.16.1 P6 (09 octobre 2025)
 
-Le correctif Cloud Volumes ONTAP 9.16.1 P6 est désormais disponible pour la mise à niveau dans Azure et Google Cloud.  Cependant, cette version n'est pas disponible pour la mise à niveau dans AWS. La NetApp Console vous invitera à mettre à niveau vos systèmes existants vers cette version de correctif.
+Le correctif Cloud Volumes ONTAP 9.16.1 P6 est désormais disponible pour la mise à niveau dans Azure et Google Cloud. Cependant, cette version n'est pas disponible pour la mise à niveau dans AWS. La console vous invitera à mettre à niveau vos systèmes existants vers cette version de correctif.
 
 link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.16.1P6["Voir la liste des bugs corrigés dans le patch P6"^] (Connexion au site de support NetApp requise).
 
