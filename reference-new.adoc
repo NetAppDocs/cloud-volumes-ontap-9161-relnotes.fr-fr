@@ -20,6 +20,14 @@ De nouvelles fonctionnalités Cloud Volumes ONTAP sont également introduites da
 
 
 
+== 9.16.1 P10 (22 décembre 2025)
+
+Le correctif Cloud Volumes ONTAP 9.16.1 P10 est désormais disponible pour la mise à niveau chez tous les fournisseurs de cloud. La console vous invitera à mettre à niveau vos systèmes existants vers cette version de correctif.
+
+link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.16.1P10["Voir la liste des bugs corrigés dans le patch P10"^](Connexion au site de support NetApp requise).
+
+
+
 == 9.16.1 P9 (04 décembre 2025)
 
 Le correctif Cloud Volumes ONTAP 9.16.1 P9 est désormais disponible pour la mise à niveau chez tous les fournisseurs de cloud. La console vous invitera à mettre à niveau vos systèmes existants vers cette version de correctif.
